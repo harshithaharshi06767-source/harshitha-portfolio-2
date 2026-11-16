@@ -54,7 +54,7 @@ if ('IntersectionObserver' in window) {
 }
 
 // Highlight the current section in the menu
-const links = [...menu.querySelectorAll('a')];
+const links = [...menu.querySelectorAll('a[href^="#"]')];
 const sections = links.map(a => document.querySelector(a.getAttribute('href')));
 function markActive() {
   const y = window.scrollY + 140;
